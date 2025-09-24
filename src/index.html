@@ -5,9 +5,85 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MP1</title>
+        <!-- FontAwesome Integration -->
+        <script src="https://kit.fontawesome.com/0898fe9ff4.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+        <!-- Header -->
+        <header> 
+            <!-- Sticky Nav Bar -->
+            <div id = "sticky-nav-bar">
+                <h2 class = "nav-icon earth"> Alyssa's Travels </h2>
+                <a href = "#about" class = "about-icon"> About </a>
+                <a href = "#travel" class = "travel-icon"> Video </a>
+                <a href = "#travel-grid" class = "travel-gallery-icon"> Gallery </a>
+            </div>
+            <h1> Alyssa's Travels </h1>
+        </header>
+
+        <!-- About Section -->
+        <section id = "about">
+            <h1> About Me </h1>
+            <p> Hi! Welcome to my website. My name is Alyssa Liliana Flores. I love to travel and made this website to show off the amazing places I have had the chance to visit!
+                A bit about me, I am a senior at the University of Illinois Urbana-Champaign studying Computer Science. In my free time, I love to play video games,
+                watch TV, and hang out with friends and family.
+            </p>
+            <h2> Here are some pictures of me! </h2>
+            <!-- Carousel -->
+            <div class = "carousel">
+                <img class = "carousel-image fade" src="assets/me2.png" alt="Alyssa Liliana Flores 1">
+                <img class = "carousel-image fade" src="assets/me3.png" alt="Alyssa Liliana Flores 2">
+                <img class = "carousel-image fade" src="assets/me1.png" alt="Alyssa Liliana Flores 3">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+
+        <!-- Travels Section -->
+        <section id = "travel">
+            <h2> Here is a video from one of my favorite trips, Epic Universe! </h2>
+            <video id = "travel-video" autoplay loop muted> 
+                <source src="assets/epic.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section id = "travel-grid">
+        <h1> Travel Gallery </h1>
+            <!-- Modal -->
+            <div class = "travel-gallery">
+                <img src = "assets/aruba.png" alt = "Aruba">
+                <img src = "assets/germany.png" alt = "Germany">
+                <img src = "assets/orlando.png" alt = "Orlando">
+                <img src = "assets/dr.png" alt = "Dominican Republic">
+                <img src = "assets/london.png" alt = "London">
+                <img src = "assets/mexico.png" alt = "Mexico">
+            </div>
+            <div class = "travel-modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modal-image">
+                <div id="caption"></div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <!-- Multi-column layout -->
+            <div class = "contact-columns">
+                <div class = "contact-github">
+                    <i class="fa-brands fa-square-github"></i>
+                    <a href = "https://github.com/alyssaflores"> GitHub </a>
+                </div>
+                <div class = "contact-linkedin">
+                    <i class="fa-brands fa-square-linkedin"></i>
+                    <a href = "https://www.linkedin.com/in/alyssa-liliana-flores/"> LinkedIn </a>
+                </div>
+                <div class = "contact-email">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href = "mailto:aflor32@illinois.edu"> Email </a>
+                </div>
+            </div>
+        </footer>
+        <script src = "js/main.js"></script>
     </body>
 </html>
